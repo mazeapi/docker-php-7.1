@@ -27,7 +27,7 @@ RUN docker-php-ext-install ctype json dom iconv xml soap xsl pdo_mysql zip exif 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.10.16
 WORKDIR /var/www
-RUN chown -R root:root .
+
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
